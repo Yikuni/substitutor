@@ -1,0 +1,10 @@
+name: Substitutor
+version: '${project.version}'
+main: com.yikuni.mc.subsitutor.Subsitutor
+api-version: 1.19
+
+depend: [RumiyaLib]
+
+commands:
+  stest:
+  sstart:
