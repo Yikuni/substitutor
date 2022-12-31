@@ -56,6 +56,7 @@ class SubsitutorHandler: Listener {
         if (!Subsitutor.isStarted()) return
         val entity = event.entity
         if (entity is Player){
+            if (event.damage < 0.1) return
             val substitutor = SubsitutorManager.subsitutorMap[entity]?:return
             val health = substitutor.health - event.finalDamage
             substitutor.health = if (health > 0) health else 0.0
